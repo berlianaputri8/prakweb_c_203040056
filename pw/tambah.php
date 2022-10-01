@@ -1,18 +1,20 @@
 <?php
 require 'function.php';
 
-// cek apakah tobol tambah sudah di tekan 
-if (isset($_POST['submit'])) {
-    if ( tambah($_POST) > 0 ) {
-        echo "<script>
-                alert('data berhasil ditambahkan!');
-                document.location.href = 'index.php';
-            </script>";
-    }else {
-        echo "data gagal ditambahkan!";
-    }
+// cek apakah tombol tambah sudah ditekan
+if (isset($_POST['tambah'])) {
+  if (tambah($_POST) > 0) {
+    echo "<script>
+          alert('data berhasil ditambahkan!');
+          document.location.href = 'index.php';    
+          </script>";
+  } else {
+    echo  "<script>
+            alert('data gagal ditambahkan!');
+            document.location.href = 'index.php';    
+          </script>";
+  }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -28,32 +30,31 @@ if (isset($_POST['submit'])) {
 <form action="" method="POST">
     <ul>
         <li>
-            <label for="judul_buku">
-                Judul Buku :                 
-            </label>
-            <input type="text" name="judul_buku" id="judul_buku" required>
+            <label>
+                Judul Buku :               
+                <input type="text" name="judul_buku" autofocus required>  
+            </label>            
         </li>
         <li>
-            <label for="pengarang">
-                Pengarang :                
-            </label>
-            <input type="text" name="pengarang" id="pengarang" required>
+            <label>
+                Pengarang :  
+                <input type="text" name="pengarang" required>              
+            </label>    
         </li>
         <li>
-            <label for="gambar">
-                Gambar :                 
-            </label>
-            <input type="file" name="gambar" id="gambar" required>
+            <label>
+                Harga :      
+                <input type="text" name="harga" required>           
+            </label>           
         </li>
         <li>
-            <label for="harga">
-                Harga :                 
-            </label>
-            <input type="text" name="harga" id="harga" required>
+            <label>
+                Gambar :   
+                <input type="text" name="file" >              
+            </label>    
         </li>
-        
         <li>
-            <button type="submit" name="submit">Tambah Data!</button>
+            <button type="submit" name="tambah">Tambah Data!</button>
         </li>
     </ul>
 </form>
