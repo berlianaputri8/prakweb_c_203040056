@@ -25,39 +25,39 @@ if (isset($_POST['tambah'])) {
     <title>Tambah Daftar Buku</title>
 </head>
 <body>
-<h3>Form Tambah Daftar Buku</h3>
+    <h3>Form Tambah Daftar Buku</h3>
 
-<form action="" method="POST">
-    <ul>
-        <li>
-            <label>
-                Judul Buku :               
-                <input type="text" name="judul_buku" autofocus required>  
-            </label>            
-        </li>
-        <li>
-            <label>
-                Pengarang :  
-                <input type="text" name="pengarang" required>              
-            </label>    
-        </li>
-        <li>
-            <label>
-                Harga :      
-                <input type="text" name="harga" required>           
-            </label>           
-        </li>
-        <li>
-            <label>
-                Gambar :   
-                <input type="text" name="file" >              
-            </label>    
-        </li>
-        <li>
-            <button type="submit" name="tambah">Tambah Data!</button>
-        </li>
-    </ul>
-</form>
+    <form action="" method="POST">
+        <ul>
+            <li>
+                <label>
+                    Judul Buku :               
+                    <input type="text" name="judul_buku" autofocus required>  
+                </label>            
+            </li>
+            <li>
+                <label>
+                    Pengarang :  
+                    <input type="text" name="pengarang" required>              
+                </label>    
+            </li>
+            <li>
+                <label>
+                    Harga :      
+                    <input type="text" name="harga" required>           
+                </label>           
+            </li>
+            <li>
+                <label>
+                    Gambar :   
+                    <input type="text" name="gambar" required>              
+                </label>    
+            </li>
+            <li>
+                <button type="submit" name="tambah">Tambah Data!</button>
+            </li>
+        </ul>
+    </form>
     
 </body>
 </html>
