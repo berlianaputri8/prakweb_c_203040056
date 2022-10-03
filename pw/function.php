@@ -35,8 +35,8 @@ function tambah($data)
 
   $query = "INSERT INTO buku VALUES (null, '$judul_buku', '$pengarang', '$harga', '$gambar')";
 
-  mysqli_query($conn, $query) or die(mysqli_error($conn));
-  echo mysqli_error($conn);
+  mysqli_query($conn, $query);
+  //echo mysqli_error($conn);
   return mysqli_affected_rows($conn);
 }
 
