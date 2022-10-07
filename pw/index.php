@@ -15,7 +15,7 @@ $buku = query("SELECT * FROM buku");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Daftar Buku</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="../pw/style.css"
+    <link rel="stylesheet" href="../pw/style.css">
   </head>
 
 <body class="luar">
@@ -42,7 +42,8 @@ $buku = query("SELECT * FROM buku");
         <td><?= $sb['harga']; ?></td>
         <td><img src="img/<?= $sb['gambar']; ?>" alt="" width="100"></td>
         <td>
-          <a class="btn btn-primary" href="ubah.php?id=<?= $sb['id_buku']; ?>">ubah</a> | <a class="btn btn-primary" href="hapus.php?id=<?= $sb['id_buku']; ?>" onclick="return confirm('apakah anda yakin?');" role="button">hapus</a>
+          <a class="btn btn-primary" href="ubah.php?id=<?= $sb['id_buku']; ?>">ubah</a> | 
+          <a class="btn btn-primary" href="hapus.php?id=<?= $sb['id_buku']; ?>" onclick="return confirm('apakah anda yakin?');" role="button">hapus</a>
         </td>
       </tr>
       <?php $i++; ?>
